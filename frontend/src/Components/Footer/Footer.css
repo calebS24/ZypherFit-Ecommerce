@@ -1,0 +1,146 @@
+.footer {
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0;
+    position: relative;
+    width: 100%;
+}
+
+.footer .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.footer p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer h3 {
+    color: #00ffc8;
+    margin-bottom: 20px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    flex-basis: 23%;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    text-align: center;
+    margin-top: 0%;
+}
+
+.footer-col-1 img {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #ff523b;
+}
+
+.footer .app-logo img {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.footer hr {
+    margin-top: 40px;
+    border: none;
+    background-color: #b5b5b5;
+    height: 1px;
+}
+
+.footer .Copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b5b5b5;
+}
+
+.copyright-box{
+    width: 100%;
+    padding: 15px;
+
+}
+
+.copyright-box p{
+    font-size: larger;
+}
+
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #222;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .menu-icon {
+        width: 28px;
+        margin-left: 20px;
+        display: block;
+    }
+}
+
+/* Media Query for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
+    }
+}
+
+/* For devices with width <= 768px (tablets and small laptops) */
+@media only screen and (max-width: 768px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2, .col-3, .col-4 {
+        flex-basis: 50%; /* Use half-width columns for better layout on tablets */
+    }
+}

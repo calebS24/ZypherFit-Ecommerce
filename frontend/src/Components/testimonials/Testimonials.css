@@ -1,0 +1,108 @@
+/* General container styling */
+.testimonial {
+    padding: 35px 15px;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    text-align: center;
+}
+
+.testimonial .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid layout for testimonials */
+.testimonial .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial .col-3 {
+    flex-basis: calc(25% - 20px); /* Four items per row on desktop */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote icon styling */
+.fa.fa-quote-left {
+    font-size: 28px;
+    color: #ff4b1f;
+    margin-bottom: 10px;
+}
+
+/* Testimonial text */
+.col-3 p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Star rating styling */
+.rating .fa {
+    color: #ffcc00;
+    font-size: 14px;
+    margin: 0 1px;
+}
+
+.rating .fa-star-o {
+    color: #ccc;
+}
+
+/* Avatar image styling */
+.testimonial .col-3 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 2px solid #ff4b1f;
+}
+
+/* Name of the reviewer */
+.testimonial .col-3 h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Media Query: For smaller screens (tablets and mobile) */
+@media only screen and (max-width: 992px) {
+    .testimonial .col-3 {
+        flex-basis: calc(33.33% - 20px); /* Three items per row */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial .col-3 {
+        flex-basis: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .testimonial .col-3 {
+        flex-basis: calc(100% - 20px); /* One item per row */
+    }
+
+    .testimonial .title {
+        font-size: 24px;
+    }
+}
