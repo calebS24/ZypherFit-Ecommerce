@@ -15,7 +15,6 @@ import Brands from "./Components/Brands/Brands";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-// #region backend server URL
 export const backend_url = "http://localhost:4000";   //backend server URL
 export const currency = "₹";    // Currency symbol for the application.
 
