@@ -1,3 +1,4 @@
+// #region Importing components
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
@@ -14,8 +15,9 @@ import Brands from "./Components/Brands/Brands";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-export const backend_url = "http://localhost:4000";
-export const currency = "₹";
+// #region backend server URL
+export const backend_url = "http://localhost:4000";   //backend server URL
+export const currency = "₹";    // Currency symbol for the application.
 
 function App() {
   return (
