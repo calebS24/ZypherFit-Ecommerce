@@ -118,6 +118,7 @@ For any queries or suggestions, please feel free to reach out:
 
 - **Name**: Caleb Shaji Varghese  
 - **Email**: calebsvarghese@gmail.com  
-- **GitHub**: [calebS24](https://github.com/calebS24)
+- **GitHub**: [/calebS24](https://github.com/calebS24)
+- **LinkedIn**: [/calebsv](https://www.linkedin.com/in/calebsv)
 
  
