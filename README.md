@@ -31,8 +31,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
-- **Payment Gateway**: Stripe
-- **Hosting**: Deployed on AWS
+- **Hosting**: Deployed on Vercel
 
 ---
 
@@ -59,17 +58,38 @@ To run this project locally, follow these steps:
    Create a `.env` file in the root directory and include the following:
    ```env
    MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   STRIPE_SECRET=your_stripe_secret_key
+   JWT_SECRET=your_jwt_secret_key
    ```
 
-5. **Run the application:**
+5. **Run Backend for fetching APIs, running process and MongoDB:**
    ```bash
+   cd backend
+   node index.js
+   ```
+
+   **Run Customer App:**
+   Open a new terminal and enter this,
+   ```bash
+   cd frontend
    npm start
    ```
 
-6. **Access the application:**
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   **Run Admin (for adding, removing and checking the products):**
+   ```bash
+   cd admin
+   npm start
+   ```
+
+   > **Note:** If `localhost:3000` is already in use, the terminal might prompt:
+   ```bash
+   "Would you like to run the app on another port instead? » (Y/n)"
+   ```      
+   >Enter "y" and you are good to go!
+   
+
+7. **Access the application:**
+
+   The apps will be open automatically on the ports `3000` and `3001`. If not, `Ctrl + Click` on the link given in the terminal.
 
 ---
 
