@@ -20,7 +20,6 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 - **Product Listings**: View detailed fitness product catalogs with categories and filters.
 - **Responsive Design**: Fully optimized for desktop and mobile devices.
 - **Admin Panel**: Manage products, orders, and user information.
-- **Search and Recommendations**: Find products easily with smart search and personalized recommendations.
 
 ---
 
