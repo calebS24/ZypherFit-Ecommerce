@@ -31,7 +31,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
-- **Hosting**: Deployed on Vercel
+- **Hosting**: Deployed on Vercel.
 
 ---
 
@@ -98,7 +98,7 @@ To run this project locally, follow these steps:
 - **For Users:**
   - Browse products and add them to your cart.
   - Create an account or log in for personalized features.
-  - Complete orders securely through the checkout process.
+  - Complete orders securely throughout the checkout process.
 
 - **For Admins:**
   - Use the admin panel to manage inventory, orders, and user data.
