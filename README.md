@@ -2,7 +2,7 @@
 
 Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusiasts to browse, shop, and purchase fitness-related products and services effortlessly. This repository contains the source code for the ZypherFit E-Commerce platform.
 
-## Table of Contents
+## 📖Table of Contents
 
 1. [Features](#features)
 2. [Technologies Used](#technologies-used)
@@ -14,7 +14,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 
 ---
 
-## Features
+## ✔️Features
 
 - **User-Friendly Interface**: A clean and intuitive UI for seamless navigation.
 - **Product Listings**: View detailed fitness product catalogs with categories and filters.
@@ -23,7 +23,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 
 ---
 
-## Technologies Used
+## 🤖Technologies Used
 
 - **Frontend**: React.js, CSS
 - **Backend**: Node.js, Express.js
@@ -33,9 +33,9 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 
 ---
 
-## Installation
+## 🚀To run this project
 
-To run this project locally, follow these steps:
+Follow these steps:
 
 1. **Clone the repository:**
    ```bash
@@ -103,7 +103,7 @@ To run this project locally, follow these steps:
 
 ---
 
-## Contributing
+## 🙌Contributing
 
 We welcome contributions! To contribute:
 
@@ -124,13 +124,13 @@ We welcome contributions! To contribute:
 
 ---
 
-## License
+## 🧾License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Contact
+## 📞Contact
 
 For any queries or suggestions, please feel free to reach out:
 
