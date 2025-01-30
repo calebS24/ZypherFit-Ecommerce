@@ -18,7 +18,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 
 - **User-Friendly Interface**: A clean and intuitive UI for seamless navigation.
 - **Product Listings**: View detailed fitness product catalogs with categories and filters.
-- **Responsive Design**: Fully optimized for desktop and mobile devices.
+- **Responsive Design**: Website is fully optimized for desktop and mobile devices of different sizes and dimensions.
 - **Admin Panel**: Manage products, orders, and add or remove user information.
 
 ---
@@ -29,7 +29,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
-- **Hosting**: Deployed on Vercel.
+- **Hosting**: Deployed on Vercel (not well maintained though).
 
 ---
 
@@ -58,6 +58,8 @@ Follow these steps:
    MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
    ```
+   > **Note:** The connection string shall be copied from the MongoDBCompass after creating a database.
+   
 
 5. **Run Backend for fetching APIs, running process and MongoDB:**
    ```bash
