@@ -1,5 +1,5 @@
 import React from "react";
-import "font-awesome/css/font-awesome.min.css";
+import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
 import "./Testimonials.css";
 import avatar2 from "../Assets/avatar-2.jpeg";
 import avatar1 from "../Assets/avatar-1.jpeg";
@@ -54,16 +54,11 @@ function Testimonials() {
       <div className="row">
         {testimonials.map((testimonial, index) => (
           <div className="col-3" key={index}>
-            <i className="fa fa-quote-left"></i>
+            <FaQuoteLeft />
             <p>{testimonial.text}</p>
             <div className="rating">
               {Array.from({ length: 5 }, (_, i) => (
-                <i
-                  className={`fa fa-star${
-                    i < Math.floor(testimonial.rating) ? "" : "-o"
-                  }`}
-                  key={i}
-                ></i>
+                i < Math.floor(testimonial.rating) ? <FaStar key={i} /> : <FaRegStar key={i} />
               ))}
             </div>
             <img src={testimonial.img} alt={testimonial.name} />
