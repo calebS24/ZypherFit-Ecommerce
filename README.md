@@ -93,6 +93,33 @@ Follow these steps:
 
 ---
 
+## 🌐 Deploy only the Customer Home Page on Vercel
+
+If you want Vercel to serve only the customer landing page, keep the frontend deployment and block all non-home routes in the React app (already done in `frontend/src/App.jsx` by redirecting `*` to `/`).
+
+### Steps
+
+1. Build-test the frontend locally:
+   ```bash
+   cd frontend
+   npm install
+   npm run build
+   ```
+2. Push your changes to GitHub.
+3. In Vercel, import this repository (or update the existing project).
+4. Set these project settings:
+   - **Root Directory**: repository root
+   - **Install Command**: `cd frontend && npm install`
+   - **Build Command**: `cd frontend && npm run build`
+   - **Output Directory**: `frontend/build`
+5. Deploy.
+
+> This repository already contains those Vercel build settings in `vercel.json`.
+> By default, the customer homepage deploy runs in **frontend-only mode** (no backend calls) so it does not throw runtime fetch errors if the backend is not deployed.
+> If you later deploy backend APIs and want live data, set `REACT_APP_ENABLE_BACKEND=true` in Vercel environment variables and redeploy.
+
+---
+
 ## Usage
 
 - **For Users:**
