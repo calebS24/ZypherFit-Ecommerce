@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import downloadapp from "../Assets/downloadapp.png"
-import logo from "../Assets/newlogoresized.png"
+import downloadapp from "../Assets/downloadapp.png";
+import logo from "../Assets/newlogoresized.png";
 
 function Footer() {
   return (
@@ -20,19 +20,19 @@ function Footer() {
             <h3>Useful Links</h3>
             <ul>
               <li>
-                <a href="#">Coupons</a>
+                <a href="/coupons">Coupons</a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li>
-                <a href="#">Return Policy</a>
+                <a href="/return-policy">Return Policy</a>
               </li>
               <li>
-                <a href="#">Referrals</a>
+                <a href="/referrals">Referrals</a>
               </li>
               <li>
-                <a href="#">Delivery</a>
+                <a href="/delivery">Delivery</a>
               </li>
               <li>
                 <a href="/Contact">Store Finder</a>
@@ -61,16 +61,11 @@ function Footer() {
           </div>
         </div>
         <hr />
-
-
-
-        
       </div>
-      <div className = "copyright-box">
-        <p>© 2024 ZypherFit Store |  All Rights Reserved</p>
-        </div>
+      <div className="copyright-box">
+        <p>© 2024 ZypherFit Store | All Rights Reserved</p>
+      </div>
     </div>
-    
   );
 }
 
