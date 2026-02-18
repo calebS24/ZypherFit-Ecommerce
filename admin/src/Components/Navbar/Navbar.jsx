@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <Link to='/' onClick={() => setMenu("shop")} style={{ textDecoration: 'none' }} className="nav-logo">
+      <Link to='/listproduct' onClick={() => setMenu("shop")} style={{ textDecoration: 'none' }} className="nav-logo">
         <img src={navlogo} alt="logo" />
         <p>ZypherFit - Admin Panel</p>
       </Link>
