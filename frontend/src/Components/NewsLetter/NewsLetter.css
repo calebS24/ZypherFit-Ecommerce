@@ -53,14 +53,29 @@
     border: none;
     outline: none;
     color: #616161;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
+.newsletter input:focus {
+    background-color: #ffffff;
+}
+
 .newsletter input::placeholder {
     color: #a0a0a0;
+}
+
+.newsletter input:-webkit-autofill,
+.newsletter input:-webkit-autofill:hover,
+.newsletter input:-webkit-autofill:focus,
+.newsletter input:-webkit-autofill:active {
+    -webkit-text-fill-color: #616161;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+    box-shadow: 0 0 0 1000px #ffffff inset;
+    transition: background-color 9999s ease-in-out 0s;
 }
 
 .newsletter div button {
