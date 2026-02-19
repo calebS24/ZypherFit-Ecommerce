@@ -15,8 +15,8 @@ import Brands from "./Components/Brands/Brands";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-export const backend_url = "http://localhost:4000";   //backend server URL
-export const currency = "₹";    // Currency symbol for the application.
+export const backend_url = (process.env.REACT_APP_BACKEND_URL || "http://localhost:4000").replace(/\/$/, "");
+export const currency = "₹"; // Currency symbol for the application.
 
 function App() {
   return (
@@ -25,13 +25,16 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={
-            <>
-              <Shop gender="all" />
-              <Testimonials />
-              <Brands />
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <Shop gender="all" />
+                <Testimonials />
+                <Brands />
+              </>
+            }
+          />
           <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
           <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
           <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />

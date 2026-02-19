@@ -3,20 +3,21 @@ import "./CSS/ShopCategory.css";
 import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
+import { backend_url } from "../App";
 
 const ShopCategory = (props) => {
   const [allproducts, setAllProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // Add a loading state
+  const [loading, setLoading] = useState(true);
 
   const fetchInfo = () => {
-    setLoading(true); // Start loading
-    fetch("http://localhost:4000/allproducts")
+    setLoading(true);
+    fetch(`${backend_url}/allproducts`)
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
-        setLoading(false); // End loading
+        setLoading(false);
       })
-      .catch(() => setLoading(false)); // Ensure loading ends on error
+      .catch(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -27,17 +28,14 @@ const ShopCategory = (props) => {
     <div className="shopcategory">
       <img src={props.banner} className="shopcategory-banner" alt="" />
       <div className="shopcategory-indexSort">
-        {/* <p>
-          <span>Showing 1 - 12</span> out of 54 Products
-        </p> */}
         <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="" />
         </div>
       </div>
       <div className="shopcategory-products">
-        {loading ? ( // Check if loading is true
+        {loading ? (
           <div className="loading-animation">
-            <div className="spinner"></div> {/* Add spinner */}
+            <div className="spinner"></div>
             <p>Loading products...</p>
           </div>
         ) : (
@@ -53,9 +51,8 @@ const ShopCategory = (props) => {
                   old_price={item.old_price}
                 />
               );
-            } else {
-              return null;
             }
+            return null;
           })
         )}
       </div>
