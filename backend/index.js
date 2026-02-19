@@ -135,6 +135,27 @@ app.get("/allproducts", async (req, res) => {
   }
 });
 
+// #region Popular In Women
+app.get("/popularinwomen", async (req, res) => {
+  try {
+    const products = await Product.find({ category: "women" }).limit(4);
+    res.json(products);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Failed to fetch popular products");
+  }
+});
+
+// #region New Collections
+app.get("/newcollections", async (req, res) => {
+  try {
+    const products = await Product.find({}).sort({ id: -1 }).limit(8);
+    res.json(products);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Failed to fetch new collections");
+  }
+});
 // #region Add Product (Admin)
 app.post("/addproduct", async (req, res) => {
   try {
@@ -180,3 +201,4 @@ app.delete("/deleteproduct/:id", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server Running on port ${port}`);
 });
+

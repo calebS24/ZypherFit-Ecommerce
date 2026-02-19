@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import "./CSS/Contact.css";
 
 const ContactUs = () => {
-  const [state, handleSubmit] = useForm("mzzblgvw");
+  const [state, handleSubmit] = useForm("mlgwweal");
 
   return (
     <div>
@@ -69,10 +69,11 @@ const ContactUs = () => {
                   <label htmlFor="sex">Sex</label>
                   <select id="sex" name="sex" required>
                     <option value="" disabled selected>
-                      Select Gender
+                      Select
                     </option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 
