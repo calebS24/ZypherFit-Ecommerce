@@ -14,23 +14,23 @@
     letter-spacing: 1px;
 }
 
-/* Grid layout for testimonials */
+/* Centered grid layout for testimonials */
 .testimonial .row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 280px));
     justify-content: center;
     gap: 20px;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .testimonial .col-3 {
-    flex-basis: calc(25% - 20px); /* Four items per row on desktop */
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 15px 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,7 +42,7 @@
 }
 
 /* Quote icon styling */
-.fa.fa-quote-left {
+.testimonial .col-3 > svg {
     font-size: 28px;
     color: #ff4b1f;
     margin-bottom: 10px;
@@ -57,14 +57,10 @@
 }
 
 /* Star rating styling */
-.rating .fa {
+.rating svg {
     color: #ffcc00;
     font-size: 14px;
     margin: 0 1px;
-}
-
-.rating .fa-star-o {
-    color: #ccc;
 }
 
 /* Avatar image styling */
@@ -86,20 +82,16 @@
 
 /* Media Query: For smaller screens (tablets and mobile) */
 @media only screen and (max-width: 992px) {
-    .testimonial .col-3 {
-        flex-basis: calc(33.33% - 20px); /* Three items per row */
+    .testimonial .row {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        max-width: 620px;
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .testimonial .col-3 {
-        flex-basis: calc(50% - 20px); /* Two items per row */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .testimonial .col-3 {
-        flex-basis: calc(100% - 20px); /* One item per row */
+@media only screen and (max-width: 600px) {
+    .testimonial .row {
+        grid-template-columns: minmax(220px, 1fr);
+        max-width: 340px;
     }
 
     .testimonial .title {
