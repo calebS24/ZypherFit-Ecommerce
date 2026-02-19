@@ -33,7 +33,7 @@ Welcome to ZypherFit, a modern e-commerce platform designed for fitness enthusia
 
 ---
 
-## 🚀To run this project
+## 🚀To run this project locally
 
 Follow these steps:
 
