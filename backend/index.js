@@ -8,11 +8,28 @@ const cors = require("cors");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors({
-  origin: ["https://zypher-fit-ecommerce.vercel.app"],
-  methods: ["GET", "POST", "DELETE"],
-  allowedHeaders: ["Content-Type", "auth-token"],
-}));
+
+const allowedOrigins = [
+  "https://zypher-fit-ecommerce.vercel.app",
+  "https://zypherfit-ecommerce.vercel.app",
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://localhost:3002",
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "auth-token", "Authorization"],
+  })
+);
 
 // #region Database + MongoDB Connection
 mongoose
@@ -205,6 +222,7 @@ app.delete("/deleteproduct/:id", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server Running on port ${port}`);
 });
+
 
 
 
