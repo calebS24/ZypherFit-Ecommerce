@@ -24,7 +24,7 @@
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: testimonialScroll 40s linear infinite;
+    animation: testimonialScroll 90s linear infinite;
 }
 
 .testimonial-marquee:hover .testimonial-track {

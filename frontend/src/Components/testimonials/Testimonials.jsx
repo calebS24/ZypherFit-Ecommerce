@@ -46,6 +46,66 @@ function Testimonials() {
       img: avatar5,
       rating: 5,
     },
+    {
+      text: "The gym shorts I ordered are incredibly comfortable and durable. Perfect for both workouts and casual wear.",
+      name: "Abby Brooks",
+      img: avatar1,
+      rating: 4,
+    },
+    {
+      text: "Fantastic quality and fast delivery! The sports bra fits perfectly and provides excellent support during intense workouts.",
+      name: "Titus Carter",
+      img: avatar2,
+      rating: 5,
+    },
+    {
+      text: "I’ve tried many brands, but these training shoes stand out. Great cushioning and stability for lifting.",
+      name: "Mishal Lee",
+      img: avatar3,
+      rating: 5,
+    },
+    {
+      text: "The fitness tracker band is sleek, lightweight, and comfortable enough to wear all day. Battery life is impressive too.",
+      name: "Samuel Brown",
+      img: avatar4,
+      rating: 4,
+    },
+    {
+      text: "Bought the insulated water bottle for hiking — keeps drinks cold for hours. Super sturdy build.",
+      name: "Minu Wilson",
+      img: avatar5,
+      rating: 4,
+    },
+    {
+      text: "Customer service was excellent, and the product quality exceeded my expectations. Will definitely buy again!",
+      name: "Sam Martinez",
+      img: avatar6,
+      rating: 5,
+    },
+    {
+      text: "The resistance bands are strong and versatile. Great addition to my home workout setup.",
+      name: "Ethan Collins",
+      img: avatar1,
+      rating: 4,
+    },
+    {
+      text: "Stylish and functional — the workout hoodie keeps me warm without feeling bulky.",
+      name: "Sophia Turner",
+      img: avatar2,
+      rating: 5,
+    },
+    {
+      text: "The ankle support braces helped me get back to training safely. Comfortable and easy to wear.",
+      name: "Jacob Harris",
+      img: avatar3,
+      rating: 4,
+    },
+    {
+      text: "Excellent grip socks for yoga and pilates. They stay in place and prevent slipping during poses.",
+      name: "Rubael Robinson",
+      img: avatar4,
+      rating: 5,
+    },
   ];
 
   const loopTestimonials = [...testimonials, ...testimonials];
