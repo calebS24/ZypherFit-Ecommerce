@@ -8,7 +8,11 @@ const cors = require("cors");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["https://zypher-fit-ecommerce.vercel.app"],
+  methods: ["GET", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type", "auth-token"],
+}));
 
 // #region Database + MongoDB Connection
 mongoose
@@ -201,4 +205,6 @@ app.delete("/deleteproduct/:id", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server Running on port ${port}`);
 });
+
+
 
