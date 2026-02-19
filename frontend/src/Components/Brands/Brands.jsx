@@ -18,18 +18,22 @@ function Brands() {
     { src: reebokLogo, alt: "Reebok Logo" },
     { src: filaLogo, alt: "Fila Logo" },
     { src: decathlonLogo, alt: "Decathlon Logo" },
-    { src: converseLogo, alt: "Converse Logo" }
+    { src: converseLogo, alt: "Converse Logo" },
   ];
+
+  const loopBrands = [...brands, ...brands];
 
   return (
     <div className="brands">
       <h2 className="title">Brands We Serve</h2>
-      <div className="row">
-        {brands.map((brand, index) => (
-          <div className="col-5" key={index}>
-            <img src={brand.src} alt={brand.alt} />
-          </div>
-        ))}
+      <div className="brands-marquee">
+        <div className="brands-track">
+          {loopBrands.map((brand, index) => (
+            <div className="brand-item" key={`${brand.alt}-${index}`}>
+              <img src={brand.src} alt={brand.alt} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
