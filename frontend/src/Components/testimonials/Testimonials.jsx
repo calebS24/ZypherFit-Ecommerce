@@ -48,23 +48,27 @@ function Testimonials() {
     },
   ];
 
+  const loopTestimonials = [...testimonials, ...testimonials];
+
   return (
     <div className="testimonial">
       <h2 className="title">Testimonials</h2>
-      <div className="row">
-        {testimonials.map((testimonial, index) => (
-          <div className="col-3" key={index}>
-            <FaQuoteLeft />
-            <p>{testimonial.text}</p>
-            <div className="rating">
-              {Array.from({ length: 5 }, (_, i) => (
-                i < Math.floor(testimonial.rating) ? <FaStar key={i} /> : <FaRegStar key={i} />
-              ))}
+      <div className="testimonial-marquee">
+        <div className="testimonial-track">
+          {loopTestimonials.map((testimonial, index) => (
+            <div className="testimonial-card" key={`${testimonial.name}-${index}`}>
+              <FaQuoteLeft />
+              <p>{testimonial.text}</p>
+              <div className="rating">
+                {Array.from({ length: 5 }, (_, i) =>
+                  i < Math.floor(testimonial.rating) ? <FaStar key={i} /> : <FaRegStar key={i} />
+                )}
+              </div>
+              <img src={testimonial.img} alt={testimonial.name} />
+              <h3>{testimonial.name}</h3>
             </div>
-            <img src={testimonial.img} alt={testimonial.name} />
-            <h3>{testimonial.name}</h3>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
